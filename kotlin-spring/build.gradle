@@ -12,13 +12,3 @@ dependencies {
   implementation "org.springframework.boot:spring-boot-starter-web"
   implementation "com.fasterxml.jackson.module:jackson-module-kotlin"
 }
-
-//publishing {
-//  publications {
-//    maven(MavenPublication) {
-//      from(components.java)
-//      artifact tasks.bootJar
-//      //artifact tasks.sourceJar
-//    }
-//  }
-//}

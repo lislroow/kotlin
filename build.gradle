@@ -83,16 +83,6 @@ dependencies {
   //testImplementation 'junit:junit'
 }
 
-//publishing {
-//  publications {
-//    maven(MavenPublication) {
-//      from(components.java)
-//      artifact tasks.bootJar
-//      artifact tasks.sourceJar
-//    }
-//  }
-//}
-
 subprojects {
   apply plugin: 'java'
   apply plugin: 'org.jetbrains.kotlin.jvm'

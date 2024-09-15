@@ -6,13 +6,3 @@ plugins {
 
 ext {
 }
-
-//publishing {
-//  publications {
-//    maven(MavenPublication) {
-//      from(components.java)
-//      artifact tasks.bootJar
-//      //artifact tasks.sourceJar
-//    }
-//  }
-//}
