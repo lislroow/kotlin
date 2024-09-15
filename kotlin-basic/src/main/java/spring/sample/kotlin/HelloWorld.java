@@ -1,4 +1,4 @@
-package samples.kotlin.hello;
+package spring.sample.kotlin;
 
 public class HelloWorld {
   public static void main(String[] args) {

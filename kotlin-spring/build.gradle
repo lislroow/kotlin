@@ -7,6 +7,12 @@ plugins {
 ext {
 }
 
+dependencies {
+  implementation platform("org.springframework.boot:spring-boot-dependencies:${spring_boot_version}")
+  implementation "org.springframework.boot:spring-boot-starter-web"
+  implementation "com.fasterxml.jackson.module:jackson-module-kotlin"
+}
+
 //publishing {
 //  publications {
 //    maven(MavenPublication) {
