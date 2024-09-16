@@ -1,4 +1,45 @@
 
+#### 6) spring bean injection
+
+주로 생성자 주입 방식으로 사용함
+
+```kotlin
+@RestController
+@RequestMapping("/employ/v1")
+class EmployController(private val employService : EmployService) { // 생성자 주입 방식
+  //@Autowired
+  //lateinit var employService: EmployService // @Autowired 방식
+  
+  @PostMapping("")
+  fun addEmploy(@RequestBody body: EmployReqDto.AddDto) {
+    employService.add(body)
+  }
+}
+
+@Service
+class EmployService {
+  fun add(addDto: EmployReqDto.AddDto) {
+    println(addDto.toString())
+  }
+}
+```
+
+#### 5) dto 중첩 표현
+
+```kotlin
+@GetMapping("/{empNo}")
+fun getEmploy(@PathVariable("empNo") empNo: String): EmployResDto.EmployDto {
+  return EmployResDto.EmployDto(empNo, "hong.gildong")
+}
+
+class EmployResDto {
+  data class EmployDto(
+    val empNo: String,
+    val name: String,
+  )
+}
+```
+
 #### 4) @RequestBody 사용 시 cannot deserialize 오류
 
 ```kotlin

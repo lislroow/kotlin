@@ -1,6 +1,10 @@
 package spring.sample.kotlin.employ.dto
 
-data class EmployResDto (
-  val empNo: String,
-  val name: String,
-)
+class EmployResDto {
+
+  data class EmployDto(
+    val empNo: String,
+    val name: String,
+  )
+
+}

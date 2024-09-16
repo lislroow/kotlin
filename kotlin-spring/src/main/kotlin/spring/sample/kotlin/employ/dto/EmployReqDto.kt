@@ -1,5 +1,13 @@
 package spring.sample.kotlin.employ.dto
 
-data class EmployReqDto(
-  val searchName: String,
-)
+class EmployReqDto {
+
+  data class SearchDto(
+    val searchName: String
+  )
+
+  data class AddDto(
+    val name: String
+  )
+
+}
